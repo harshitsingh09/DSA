@@ -2,9 +2,9 @@ package DSA;
 
 public class maximum {
     public static void main(String[] args) {
-        int [] arr = {1, 23, 8, 9, 18};
-        swap(arr, 1, 3);
-        System.out.println(max(arr));
+        int [] arr = {1, 23, 78, 9, 18};
+        int maxValue = max(arr);
+        System.out.println("The maximum value is: " +maxValue);
     }
     static int max(int [] arr){
         int maxVal = arr[0];
@@ -12,6 +12,7 @@ public class maximum {
             if (arr[i] > maxVal) {
                 maxVal = arr[i];                
             }
-        } 
+        }
+        return maxVal;
     }
 }
