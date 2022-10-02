@@ -1,5 +1,5 @@
 package DSA;
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class richestCustomer {
     public static void main(String[] args) {
