@@ -1,3 +1,7 @@
+/*
+Given the array nums consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn].
+Return the array in the form [x1,y1,x2,y2,...,xn,yn].
+*/
 package DSA;
 import java.util.Arrays;
 
@@ -10,17 +14,6 @@ public class shuffle {
     }
     public static int[] shuf(int[] nums, int n) {
         int[] test = new int[nums.length];
-        // for (int i = 0; i < nums.length; i++) {
-        //     for (int j = 0; j < n; j++) {
-        //         if(i % 2 == 0){
-        //             test[i] = nums[j];
-        //         }
-        //         else{
-        //             test[i] = nums[n];
-        //             //n++;
-        //         }
-        //     }
-        // }
         for (int i = 0; i < n; i++) {
             test[2*i] = nums[i];
             test[2*i+1] = nums[n + i];
