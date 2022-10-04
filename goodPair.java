@@ -14,9 +14,10 @@ public class goodPair {
     public static int numIdenticalPairs(int[] nums) {
         int count = 0;
         for (int i = 0; i < nums.length; i++) {
-            for (int j = i; j < nums.length; j++) {
+            for (int j = i; i < j && j < nums.length; j++) {
                 if(nums[i] == nums[j]){
                     count += 1;
+                }
             }
         }
         return count;
