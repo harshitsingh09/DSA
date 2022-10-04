@@ -1,16 +1,14 @@
+/*
+You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. 
+Return the wealth that the richest customer has.
+A customer's wealth is the amount of money they have in all their bank accounts. 
+The richest customer is the customer that has the maximum wealth.
+*/
 package DSA;
-// import java.util.Scanner;
 
 public class richestCustomer {
     public static void main(String[] args) {
-        // Scanner sc = new Scanner(System.in);
-        // System.out.println("Enter the 'm' and 'n' of m*n matrix: ");
-        // int m = sc.nextInt();
-        // int n = sc.nextInt();
-        // int[][] arr = new int [m][n];
-        // arr = array();
-        // sc.close();
-        int [][] arr = {{1, 3, 4}, {0, 3, 1}, {1, 1, 1}};
+        int [][] arr = {{1, 3, 4}, {0, 3, 1}, {1, 1, 1}}; // Input values can be edited or scanner can be used instead
         int [] asd = finalArr(arr);
         int maximum = max(asd);
         System.out.println(maximum);
