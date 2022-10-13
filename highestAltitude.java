@@ -1,19 +1,28 @@
 package DSA;
-import java.util.*;
 
 public class highestAltitude {
     public static void main(String[] args) {
-        int[] gain = {-5,1,5,0,-7};
+        int[] gain = {-4,-3,-2,-1,4,3,2};
         int answer = largestAltitude(gain);
         System.out.println(answer);
     }
     public static int largestAltitude(int[] gain) {
-        int[] arr = new int[gain.length + 1];
-        arr[0] = 0;
-        for (int i = 0; i < arr.length; i++) {
-            arr[i + 1] = gain[i] + arr[i];
+        int sum = 0;
+        int[] altitude = new int[gain.length+1];
+        altitude[0] = 0;     
+        for(int i = 0; i < gain.length; i++) {
+            sum += gain[i];
+            altitude[i+1] = sum;
         }
-        Arrays.sort(arr);
-        return arr[arr.length - 1];
+        int maxAltitude = 0;
+        for(int i = 0; i < altitude.length; i++) {
+            if(altitude[i] > maxAltitude) {
+                maxAltitude = altitude[i];
+            }
+        }
+        if (maxAltitude < 0) {
+            return(0);
+        }
+        return maxAltitude;
     }
 }
